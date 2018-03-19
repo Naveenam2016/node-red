@@ -29,7 +29,7 @@ function init(_settings, _runtime) {
     settings = _settings;
     runtime = _runtime;
     log = runtime.log;
-    sshkeyDir = fspath.resolve(fspath.join(settings.userDir, "projects", ".sshkeys"));
+    sshkeyDir = settings.projectsDir ? fspath.resolve(fspath.join(settings.projectsDir, ".sshkeys")) : fspath.resolve(fspath.join(settings.userDir, "projects", ".sshkeys")); // Use projectsDir if available, for storing Projects and ssh keys
     userSSHKeyDir = fspath.join(process.env.HOME || process.env.USERPROFILE || process.env.HOMEPATH, ".ssh");
     // console.log('sshkeys.init()');
     return fs.ensureDir(sshkeyDir);

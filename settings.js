@@ -19,6 +19,17 @@
 //var fs = require("fs");
 
 module.exports = {
+    //Enable Projects
+    //editorTheme: {
+    //   projects: {
+    //       enabled: true
+    //   }
+    //},
+ 
+    // By default, Projects are stored in {userDir}/projects/. To use a different location, 
+    // the following property can be used
+    //projectsDir: '/home/nol/node-red-projects/',
+
     // the tcp port that the Node-RED web server is listening on
     uiPort: process.env.PORT || 1880,
 
